@@ -1,8 +1,8 @@
 {
   "app": "Afghan Telecom Pro",
-  "version": 2,
-  "last_checked": "2026-11-22",
-  "verified_label": "22 نومبر 2026",
+  "version": 3,
+  "last_checked": "2026-11-23",
+  "verified_label": "23 نومبر 2026",
   "sources": {
     "awccNet": "https://afghan-wireless.com/internet-3g2g/3g-internet/packages/",
     "awccVoice": "https://afghan-wireless.com/personal/voice/",
@@ -12,7 +12,10 @@
     "eandVoiceDW": "https://eand.af/index.php/en/promotions/current-promotions/daily-weekly-bundle",
     "atoma": "https://atoma.com.af",
     "salaamData": "https://www.salaam.af/en/products-and-services/4/data",
-    "salaamVoice": "https://www.salaam.af/en/products-and-services/2/voice"
+    "salaamVoice": "https://www.salaam.af/en/products-and-services/2/voice",
+    "roshanFaqs": "https://www.roshan.af/faqs",
+    "eandMumtaz": "https://eand.af/index.php/en/personal/plans/prepaid/mumtaz",
+    "ussdGuide": "https://topupafg.com/blog/afghanistan-ussd-codes"
   },
   "networks": [
     {
@@ -5663,8 +5666,37 @@
     "awcc": [
       {
         "k": "balance",
-        "code": null,
-        "note": "noteAwccBal"
+        "code": "*123#",
+        "note": "noteAwccBal",
+        "src": "https://afghan-wireless.com/personal/voice/"
+      },
+      {
+        "k": "datamenu",
+        "code": "*255#",
+        "src": "https://afghan-wireless.com/personal/voice/"
+      },
+      {
+        "k": "voicemenu",
+        "code": "*233#",
+        "src": "https://afghan-wireless.com/personal/voice/"
+      },
+      {
+        "k": "pkgmenu",
+        "code": "*151#",
+        "sec": true,
+        "src": "https://afghan-wireless.com/personal/voice/"
+      },
+      {
+        "k": "transfer",
+        "code": "*444*1*<number>*<amount>#",
+        "sec": true,
+        "src": "https://afghan-wireless.com/personal/voice/"
+      },
+      {
+        "k": "recharge",
+        "code": "*123*<PIN>#",
+        "sec": true,
+        "src": "https://afghan-wireless.com/personal/voice/"
       },
       {
         "k": "mynumber",
@@ -5686,8 +5718,10 @@
         "code": "*555#"
       },
       {
-        "k": "pkgmenu",
-        "code": "*888#"
+        "k": "transfer",
+        "code": "*123*<number>*<amount>#",
+        "sec": true,
+        "src": "https://www.roshan.af/faqs"
       },
       {
         "k": "mynumber",
@@ -5704,15 +5738,27 @@
         "code": "*123#"
       },
       {
-        "k": "pkgmenu",
-        "code": "*888#"
-      },
-      {
         "k": "netbal",
         "sms": {
           "text": "505",
           "to": "606"
         }
+      },
+      {
+        "k": "netbal",
+        "code": "*144*3#",
+        "sec": true,
+        "src": "https://eand.af/index.php/en/personal/plans/prepaid/mumtaz"
+      },
+      {
+        "k": "pkgmenu",
+        "code": "*888#"
+      },
+      {
+        "k": "transfer",
+        "code": "*125*<number>*<amount>#",
+        "sec": true,
+        "src": "https://eand.af/index.php/en/personal/plans/prepaid/mumtaz"
       },
       {
         "k": "mynumber",
@@ -5727,8 +5773,27 @@
     "atoma": [
       {
         "k": "balance",
-        "code": null,
-        "sec": true
+        "code": "*310#",
+        "sec": true,
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
+      },
+      {
+        "k": "netbal",
+        "code": "*344*10#",
+        "sec": true,
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
+      },
+      {
+        "k": "minutes",
+        "code": "*789*25#",
+        "sec": true,
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
+      },
+      {
+        "k": "smsbal",
+        "code": "*789*24#",
+        "sec": true,
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
       },
       {
         "k": "datamenu",
@@ -5739,20 +5804,50 @@
         "code": "*247#"
       },
       {
+        "k": "transfer",
+        "code": "*776*2*<amount>*<number>#",
+        "sec": true,
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
+      },
+      {
+        "k": "recharge",
+        "code": "*311*<PIN>#",
+        "sec": true,
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
+      },
+      {
         "k": "mynumber",
         "code": null
       },
       {
         "k": "care",
         "code": "779",
-        "sec": true
+        "sec": true,
+        "extra": "0772222779",
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
       }
     ],
     "salaam": [
       {
         "k": "balance",
-        "code": null,
-        "sec": true
+        "code": "*888#",
+        "sec": true,
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
+      },
+      {
+        "k": "netbal",
+        "sms": {
+          "text": "888",
+          "to": "888"
+        },
+        "sec": true,
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
+      },
+      {
+        "k": "transfer",
+        "code": "*741*<number>*<amount>#",
+        "sec": true,
+        "src": "https://topupafg.com/blog/afghanistan-ussd-codes"
       },
       {
         "k": "mynumber",
